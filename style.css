@@ -1,0 +1,198 @@
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url('buzz.gif'),white;
+    filter: brightness(1.5)opacity(0.1);
+    
+}
+*,*::after,*::before{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	object-fit : cover;
+}
+:root{
+	--p-clr:#e50914;
+}
+
+@font-face{
+	font-family : 'raleway';
+	src : url('./raleway.thin.ttf')
+}
+@font-face{
+	font-family : 'Callista';
+	src : url('./Callista.ttf')
+}
+
+@font-face{
+	font-family : 'cinzel';
+	src : url('./cinzel.regular.ttf')
+}
+body {
+    font-size: 1rem;
+    color: red;
+    background: #fff9f5;
+    background-position: center;
+    background-size: cover;
+    font-family: 'raleway';
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+a{
+	cursor : pointer;
+	text-decoration:none;
+	color:inherit
+}
+body > * {
+    min-height: 100vh;
+    mix-blend-mode: darken;
+}
+
+.nav-list-wrapper  ul { display: none}
+section.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 420px 1fr;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.hero-intro {
+    border: 1px #c7c7c7 solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+}
+.hero-item  > *{  padding: 1rem; }
+.social-links-grid {
+    display: grid;
+    width: 100%;
+    height: 300px;
+    grid-template-rows: repeat(4,minmax(60px,1fr));
+    grid-template-columns: repeat(4,minmax(25%,1fr));
+	border-bottom : 0.5px red solid;
+	position:relative;
+	font-weight:900;
+	overflow :hidden;
+	transition : 0.3s;
+}
+.social-links-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 178%;
+	
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transform: rotate3d(1, 1, 1, 43deg)scale(2.5);
+	transition : 0.4s;
+}
+.social-links-grid:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+    transform: rotate3d(1, 1, 1, 0deg)scale(1);
+}
+
+
+.social-links-grid > a { transition : 2s; position : relative}
+.social-links-grid > a::after{
+	
+}
+.social-links-grid > a:hover {
+	letter-spacing:8px;
+	border-left : 1px black;
+	transition : 0.3s;
+}
+a#ld {
+    grid-column: 2/-1;
+}
+a#fb {
+    grid-column: 4/-1;
+}
+a#ig {
+    grid-column: 1/-1;
+}
+a#wa {
+    grid-column: 3;
+    grid-row: 4;
+}
+h1.hero-name {
+    font-size: 5rem;
+    font-family: 'raleway';
+    font-weight: 200;
+}
+.hero-name-wrapper > small {
+    color: gray;
+    margin-left: 0.5rem;
+    letter-spacing: 2px;
+	
+    font-family: 'raleway';
+}
+.hero-profile {
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: url(heroi.jpg),#7d7d7d;
+    background-size: cover;
+    filter: grayscale(1)brightness(1.5);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero-profile:after {
+	content : '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.hero-profile > img{
+	width:100%;
+	height : 100%;
+	position:relative;
+	z-index: -1;
+}
+.hero-item.hero-navlinks {
+    position: relative;
+}
+.hero-info-paragraph{
+	display:table;
+	margin:auto;
+}
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem !important;
+	font-family : 'raleway';
+    position: absolute;
+    border-bottom: 0.5px solid red;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.hero-info-paragraph {
+    display: flex;
+    margin: auto;
+    height: 100%;
+    place-content: center;
+    border-right: 0.5px red solid;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero-info-paragraph > p{
+	
+	width : 70%;
+	border-right: 0.5px red solid
+}
